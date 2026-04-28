@@ -13,9 +13,9 @@ namespace BusinessLayer
         int ApplicationPersonID { get; set; }
         DateTime ApplicaionDate { get; set; }
         int ApplicationType { get; set; }
-        int ApplicationStatus { get; set; }
+        byte ApplicationStatus { get; set; }
         DateTime LastStatusDate { get; set; }
-        int PaidFees { get; set; }
+        decimal PaidFees { get; set; }
         int CreatedByUserID { get; set; }
 
 

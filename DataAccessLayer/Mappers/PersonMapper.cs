@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer.Mappers
 {
+
     internal class PersonMapper
     {
         public static PersonDTO FromReader(SqlDataReader reader)
@@ -51,41 +52,34 @@ namespace DataAccessLayer.Mappers
                 command.Parameters.Add("@PersonID", SqlDbType.Int).Value = personDTO.ID;
             }
 
-            command.Parameters.Add("@NationalNo", SqlDbType.NVarChar, 20).Value =
-                SqlParameterHelper.ToDbValue(personDTO.NationalNo);
+            command.Parameters.Add("@NationalNo", SqlDbType.NVarChar, 20).Value = personDTO.NationalNo;
 
-            command.Parameters.Add("@FirstName", SqlDbType.NVarChar, 20).Value =
-                SqlParameterHelper.ToDbValue(personDTO.FirstName);
+            command.Parameters.Add("@FirstName", SqlDbType.NVarChar, 20).Value = personDTO.FirstName;
 
-            command.Parameters.Add("@SecondName", SqlDbType.NVarChar, 20).Value =
-                SqlParameterHelper.ToDbValue(personDTO.SecondName);
+            command.Parameters.Add("@SecondName", SqlDbType.NVarChar, 20).Value = personDTO.SecondName;
 
             command.Parameters.Add("@ThirdName", SqlDbType.NVarChar, 20).Value =
                 SqlParameterHelper.ToDbValue(personDTO.ThirdName);
 
-            command.Parameters.Add("@LastName", SqlDbType.NVarChar, 20).Value =
-                SqlParameterHelper.ToDbValue(personDTO.LastName);
+            command.Parameters.Add("@LastName", SqlDbType.NVarChar, 20).Value = personDTO.LastName;
 
-            command.Parameters.Add("@DateOfBirth", SqlDbType.DateTime).Value =
-                personDTO.DateOfBirth;
+            command.Parameters.Add("@DateOfBirth", SqlDbType.DateTime).Value = personDTO.DateOfBirth;
 
-            command.Parameters.Add("@Gender", SqlDbType.TinyInt).Value =
-                personDTO.Gender;
+            command.Parameters.Add("@Gender", SqlDbType.TinyInt).Value = personDTO.Gender;
 
-            command.Parameters.Add("@Address", SqlDbType.NVarChar, 500).Value =
-                SqlParameterHelper.ToDbValue(personDTO.Address);
+            command.Parameters.Add("@Address", SqlDbType.NVarChar, 500).Value = personDTO.Address;
 
-            command.Parameters.Add("@Phone", SqlDbType.NVarChar, 20).Value =
-                SqlParameterHelper.ToDbValue(personDTO.Phone);
+            command.Parameters.Add("@Phone", SqlDbType.NVarChar, 20).Value = personDTO.Phone;
 
             command.Parameters.Add("@Email", SqlDbType.NVarChar, 50).Value =
                 SqlParameterHelper.ToDbValue(personDTO.Email);
 
-            command.Parameters.Add("@NationalityCountryID", SqlDbType.Int).Value =
-                personDTO.NationalityCountryID;
+            command.Parameters.Add("@NationalityCountryID", SqlDbType.Int).Value = personDTO.NationalityCountryID;
 
             command.Parameters.Add("@ImagePath", SqlDbType.NVarChar, 250).Value =
                 SqlParameterHelper.ToDbValue(personDTO.ImagePath);
         }
     }
+
+
 }
