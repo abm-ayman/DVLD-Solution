@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer
 {
-    internal class ApplicationTypeData
+    internal class clsApplicationTypeData
     {
 
         public static ApplicationTypeDTO GetApplicationTypeByID(int applicationTypeID)

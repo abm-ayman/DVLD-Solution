@@ -41,7 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ApplicationTypeData.cs" />
+    <Compile Include="clsApplicationTypeData.cs" />
     <Compile Include="clsApplicationData.cs" />
     <Compile Include="clsCountryData.cs" />
     <Compile Include="clsDriversData.cs" />
@@ -49,6 +49,9 @@
     <Compile Include="clsLicenseClassData.cs" />
     <Compile Include="clsLicenseData.cs" />
     <Compile Include="clsLocalDrivingLicenseApplicationData.cs" />
+    <Compile Include="clsTestAppointmentData.cs" />
+    <Compile Include="clsTestData.cs" />
+    <Compile Include="clsTestTypeData.cs" />
     <Compile Include="clsUserData.cs" />
     <Compile Include="DTOs\ApplicationDTO.cs" />
     <Compile Include="DTOs\ApplicationTypeDTO.cs" />
@@ -59,6 +62,9 @@
     <Compile Include="DTOs\LicenseClassDTO.cs" />
     <Compile Include="DTOs\LicenseDTO.cs" />
     <Compile Include="DTOs\LocalDrivingLicenseApplicationDTO.cs" />
+    <Compile Include="DTOs\TestAppointmentDTO.cs" />
+    <Compile Include="DTOs\TestDTO.cs" />
+    <Compile Include="DTOs\TestTypeDTO.cs" />
     <Compile Include="DTOs\UserDTO.cs" />
     <Compile Include="Mappers\ApplicationMapper.cs" />
     <Compile Include="Mappers\ApplicationTypeMapper.cs" />
@@ -70,6 +76,9 @@
     <Compile Include="Mappers\LicenseMapper.cs" />
     <Compile Include="Mappers\LocalDrivingLicenseApplicationMapper.cs" />
     <Compile Include="Mappers\PersonMapper.cs" />
+    <Compile Include="Mappers\TestAppointmentMapper.cs" />
+    <Compile Include="Mappers\TestMapper.cs" />
+    <Compile Include="Mappers\TestTypeMapper.cs" />
     <Compile Include="Mappers\UserMapper.cs" />
     <Compile Include="Settings\clsDataAccessSettings.cs" />
     <Compile Include="clsPersonData.cs" />
