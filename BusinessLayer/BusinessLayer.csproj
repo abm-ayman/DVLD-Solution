@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLLMappers\BLLUserMapper.cs" />
     <Compile Include="Entities\clsApplication.cs" />
     <Compile Include="Entities\clsPerson.cs" />
     <Compile Include="Entities\clsUser.cs" />

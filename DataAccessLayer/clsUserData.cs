@@ -61,6 +61,59 @@ namespace DataAccessLayer
             return null;
         }
 
+        public static DataAccessLayer.DTOs.UserDTO GetUserInfoByUsername(string Username)
+        {
+            string query = "select UserID, PersonID, UserName, Password, IsActive from Users where UserName = @UserName;";
+
+            using (SqlConnection connection = new SqlConnection(DataAccessLayer.Settings.clsConnectionStrings.DVLDConnectionString))
+            using (SqlCommand command = new SqlCommand(query, connection))
+            {
+                command.Parameters.AddWithValue("@UserName", Username);
+
+                connection.Open();
+
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        return DataAccessLayer.Mappers.UserMapper.FromReader(reader);
+                    }
+
+                }
+
+            }
+
+            return null;
+        }
+
+        public static DataAccessLayer.DTOs.UserDTO GetUserInfoByUsername(string username, string password)
+        {
+            string query = 
+                "select UserID, PersonID, UserName, Password, IsActive from Users " +
+                "where UserName = @UserName AND Password = @Password;";
+
+            using (SqlConnection connection = new SqlConnection(DataAccessLayer.Settings.clsConnectionStrings.DVLDConnectionString))
+            using (SqlCommand command = new SqlCommand(query, connection))
+            {
+                command.Parameters.AddWithValue("@UserName", username);
+                command.Parameters.AddWithValue("@Password", password);
+
+                connection.Open();
+
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        return DataAccessLayer.Mappers.UserMapper.FromReader(reader);
+                    }
+
+                }
+
+            }
+
+            return null;
+        }
+
         public static int AddNewUser(UserDTO userDTO)
         {
             string query = @"
